@@ -414,7 +414,7 @@ fi
 
 /usr/local/apache2/bin/apachectl restart
 check_ok
-echo "\033[32m apache restart...ok \033[0m"
+echo -e "\033[32m apache restart...ok \033[0m"
 }
 #检查服务是否存在
 check_srv(){
@@ -550,9 +550,9 @@ curl -I 127.0.0.1/1.php|grep PHP >/dev/null 2>&1
 
 if [ $? == 0 ]
 then
-  echo "恭喜，已成功解析PHP"
+  echo -e "恭喜，已成功解析PHP"
 else
-  echo "遗憾，没能成功解析PHP"
+  echo -e "遗憾，没能成功解析PHP"
 fi
 }
 ##LAMP
