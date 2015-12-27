@@ -278,10 +278,10 @@ install_httpd(){
     [ -f httpd-2.4.17.tar.gz ] || wget http://mirrors.sohu.com/apache/httpd-2.4.17.tar.gz
     tar -zxvf  httpd-2.4.17.tar.gz
     check_ok
-    wget http://mirrors.cnnic.cn/apache/apr/apr-1.5.2.tar.bz2
+    [ -f apr-1.5.2.tar.bz2 ] || wget http://mirrors.cnnic.apr-1.5.2.tar.bz2 ] || cn/apache/apr/apr-1.5.2.tar.bz2
     tar -jxvf apr-1.5.2.tar.bz2
     check_ok
-     wget http://mirrors.cnnic.cn/apache/apr/apr-util-1.5.4.tar.gz
+    [ -f apr-util-1.5.4.tar.gz ] ||  wget http://mirrors.cnnic.cn/apache/apr/apr-util-1.5.4.tar.gz
     tar -zxvf apr-util-1.5.4.tar.gz
     check_ok
     cd /usr/local/src/apr-1.5.2
