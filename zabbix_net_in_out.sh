@@ -27,7 +27,7 @@ then
     d_old=`tail -1 /tmp/net_date_$1_out.log`
    d_new=`date +%s`
    net_old=`tail -1 /tmp/net_$1_out.log`
-   net_new=`grep $1 /proc/net/dev|awk '{print $10}'|cut -d : -f 2`
+   net_new=`grep $1 /proc/net/dev|awk '{print $10}'`
    b=$[ $net_new - $net_old ]
    a=$[ $d_new - $d_old ]
    c=$[ $b / $a ]
